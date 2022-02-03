@@ -3,6 +3,11 @@
 module NANPA
   module COC
     class CentralOfficeCode < ApplicationRecord
+      enum initial_growth: {
+        'I' => 0,
+        'G' => 1,
+      }
+
       def npa_nxx=(val)
         super(val.gsub(/[^\d]/, ''))
       end
