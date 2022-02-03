@@ -1,14 +1,33 @@
 # NANPA::COC
-Short description and motivation.
+
+A Rails engine providing models, migrations, and tasks to import a database of NANPA Central Office Codes into your Rails app.
 
 ## Usage
-How to use my plugin.
+Install and run migrations:
+
+```
+$ rake nanpa_coc:install:migrations
+$ bundle exec rails db:migrate
+```
+
+Then, download and import the Central Office Code report:
+
+```
+$ rake nanpa:download nanpa:import
+```
+
+This will take a while.
+
+Once installed, use `NANPA::COC::CentralOfficeCode` like any other Rails model. Fields of note:
+- `npa_nxx`: the normalized NPA-NXX, e.g. 401-245 becomes 401245
+- `rate_center`: title of the location, often the name of a town/city
+- `state`: 2-letter state abbreviation
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "rails-nanpa-coc"
+gem "nanpa-coc"
 ```
 
 And then execute:
@@ -18,7 +37,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install rails-nanpa-coc
+$ gem install nanpa-coc
 ```
 
 ## Contributing
