@@ -1,0 +1,12 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+r_907200:
+  npa_nxx: "907200"
+  state: "AK"
+  ocn: 6872
+  company: "GCI COMMUNICATION CORP. DBA GENERAL COMMUNICATION"
+  rate_center: "VALDEZ"
+  assign_date: "02/21/2006"
+  initial_growth: "I"
+  pooled: false
+  in_service: nil
