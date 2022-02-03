@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_030609) do
     t.string "rate_center"
     t.integer "ocn"
     t.string "company", null: false
-    t.integer "initial_growth", limit: 1, null: false
-    t.boolean "pooled", null: false
+    t.integer "initial_growth", limit: 1
+    t.boolean "pooled"
     t.boolean "in_service"
     t.date "effective_date"
     t.date "assign_date"

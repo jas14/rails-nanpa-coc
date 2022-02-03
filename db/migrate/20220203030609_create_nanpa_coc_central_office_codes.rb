@@ -7,8 +7,8 @@ class CreateNanpaCocCentralOfficeCodes < ActiveRecord::Migration[7.0]
       t.integer :ocn
       t.string :company, null: false
 
-      t.integer :initial_growth, limit: 1, null: false
-      t.boolean :pooled, null: false
+      t.integer :initial_growth, limit: 1
+      t.boolean :pooled
       t.boolean :in_service
 
       t.date :effective_date
