@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails-nanpa-coc (0.1.0)
+    nanpa-coc (0.1.0)
       activerecord
       activesupport
       bundler
@@ -93,7 +93,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  rails-nanpa-coc!
+  nanpa-coc!
   rubocop (~> 1.25)
   sqlite3
 

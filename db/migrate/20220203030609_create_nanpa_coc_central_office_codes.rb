@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateNanpaCocCentralOfficeCodes < ActiveRecord::Migration[7.0]
+class CreateNanpaCocCentralOfficeCodes < ActiveRecord::Migration[6.1]
   def change
     create_table :nanpa_coc_central_office_codes do |t|
       t.string :npa_nxx, limit: 6, index: { unique: true }

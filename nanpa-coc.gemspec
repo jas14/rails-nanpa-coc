@@ -3,7 +3,7 @@
 require_relative 'lib/nanpa/coc/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'rails-nanpa-coc'
+  spec.name        = 'nanpa-coc'
   spec.version     = NANPA::COC::VERSION
   spec.authors     = ['Joe Stein']
   spec.email       = ['joe@splitwise.com']
