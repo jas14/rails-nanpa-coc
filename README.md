@@ -27,17 +27,12 @@ Once installed, use `NANPA::COC::CentralOfficeCode` like any other Rails model. 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "nanpa-coc"
+gem "nanpa-coc", github: "jas14/rails-nanpa-coc"
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install nanpa-coc
 ```
 
 ## Contributing
