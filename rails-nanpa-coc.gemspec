@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/jas14/rails-nanpa-coc'
   spec.summary     = 'Rails engine defining tasks and models for NANPA Central Office Code records.'
   spec.license     = 'MIT'
-  spec.required_ruby_version = '~> 2.7'
+  spec.required_ruby_version = '~> 3.0'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
