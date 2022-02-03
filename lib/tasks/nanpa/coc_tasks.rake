@@ -2,3 +2,15 @@
 # task :rails_nanpa_coc do
 #   # Task goes here
 # end
+
+namespace :nanpa do
+  desc "Download NANPA COC database"
+  task :download do
+    require 'fileutils'
+    target_dir = Rails.root.join('tmp', 'db')
+    FileUtils.mkdir_p(target_dir)
+    target_zip = File.join(target_dir, 'allutlzd.zip')
+    system("curl https://nationalnanpa.com/nanp1/allutlzd.zip --output #{target_zip}")
+    system("cd #{target_dir} && unzip allutlzd.zip && rm allutlzd.zip")
+  end
+end
