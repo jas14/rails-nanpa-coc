@@ -1,7 +1,11 @@
-require "test_helper"
+# frozen_string_literal: true
 
-class NANPA::COCTest < ActiveSupport::TestCase
-  test "it has a version number" do
-    assert NANPA::COC::VERSION
+require 'test_helper'
+
+module NANPA
+  class COCTest < ActiveSupport::TestCase
+    test 'it has a version number' do
+      assert NANPA::COC::VERSION
+    end
   end
 end

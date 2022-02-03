@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # desc "Explaining what the task does"
 # task :rails_nanpa_coc do
 #   # Task goes here
 # end
 
 namespace :nanpa do
-  desc "Download NANPA COC database"
+  desc 'Download NANPA COC database'
   task :download do
     require 'fileutils'
     target_dir = Rails.root.join('tmp', 'db')
@@ -14,7 +16,7 @@ namespace :nanpa do
     system("cd #{target_dir} && unzip allutlzd.zip && rm allutlzd.zip")
   end
 
-  desc "Import NANPA COC database from TSV file into ActiveRecord"
+  desc 'Import NANPA COC database from TSV file into ActiveRecord'
   task import: :environment do
     NANPA::COC::Importer.new(file_path: Rails.root.join('tmp', 'db', 'allutlzd.txt')).run!
   end

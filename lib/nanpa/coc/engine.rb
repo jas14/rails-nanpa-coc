@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module NANPA
   module COC
     class Engine < ::Rails::Engine

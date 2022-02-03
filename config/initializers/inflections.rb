@@ -3,6 +3,6 @@
 Rails.autoloaders.each do |autoloader|
   autoloader.inflector.inflect(
     'coc' => 'COC',
-    'nanpa' => 'NANPA',
+    'nanpa' => 'NANPA'
   )
- end
+end

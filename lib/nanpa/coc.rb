@@ -1,5 +1,7 @@
-require "nanpa/coc/version"
-require "nanpa/coc/engine"
+# frozen_string_literal: true
+
+require 'nanpa/coc/version'
+require 'nanpa/coc/engine'
 
 module NANPA
   module COC

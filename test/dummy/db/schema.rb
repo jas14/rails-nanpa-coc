@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,22 +12,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_030609) do
-
-  create_table "nanpa_coc_central_office_codes", force: :cascade do |t|
-    t.string "npa_nxx", limit: 6
-    t.string "state", limit: 2
-    t.string "rate_center"
-    t.integer "ocn"
-    t.string "company", null: false
-    t.integer "initial_growth", limit: 1
-    t.boolean "pooled"
-    t.boolean "in_service"
-    t.date "effective_date"
-    t.date "assign_date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["npa_nxx"], name: "index_nanpa_coc_central_office_codes_on_npa_nxx", unique: true
+ActiveRecord::Schema.define(version: 20_220_203_030_609) do
+  create_table 'nanpa_coc_central_office_codes', force: :cascade do |t|
+    t.string 'npa_nxx', limit: 6
+    t.string 'state', limit: 2
+    t.string 'rate_center'
+    t.integer 'ocn'
+    t.string 'company', null: false
+    t.integer 'initial_growth', limit: 1
+    t.boolean 'pooled'
+    t.boolean 'in_service'
+    t.date 'effective_date'
+    t.date 'assign_date'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['npa_nxx'], name: 'index_nanpa_coc_central_office_codes_on_npa_nxx', unique: true
   end
-
 end

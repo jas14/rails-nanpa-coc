@@ -26,14 +26,10 @@ module NANPA
         File.foreach(file_path).with_index do |line, line_num|
           next if line_num.zero? # header
 
-          values = line.split("\t").map { |value| value.strip.presence }
-          field_hash = FIELDS.zip(values).to_h
+          field_hash = extract_fields(line)
           next if field_hash.delete('use') == 'UA'
 
-          normalized = CentralOfficeCode.new(field_hash)
-
-          record = CentralOfficeCode.find_or_initialize_by(npa_nxx: normalized.npa_nxx)
-          record.update!(normalized.attributes.slice(*FIELDS))
+          upsert_from_hash(field_hash)
         rescue StandardError => e
           logger&.error("Issue with COC #{field_hash['npa_nxx']}:")
           logger&.error(e.message)
@@ -42,6 +38,18 @@ module NANPA
       end
 
       private
+
+      def extract_fields(line)
+        values = line.split("\t").map { |value| value.strip.presence }
+        FIELDS.zip(values).to_h
+      end
+
+      def upsert_from_hash(field_hash)
+        normalized = CentralOfficeCode.new(field_hash)
+
+        record = CentralOfficeCode.find_or_initialize_by(npa_nxx: normalized.npa_nxx)
+        record.update!(normalized.attributes.slice(*FIELDS))
+      end
 
       def parse_date(str)
         return nil unless str
