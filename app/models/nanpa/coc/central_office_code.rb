@@ -13,7 +13,7 @@ module NANPA
       end
 
       def company=(val)
-        super(val.gsub(/(^"|"\s*$)/, ''))
+        super(val&.gsub(/(^"|"\s*$)/, ''))
       end
 
       def effective_date=(val)

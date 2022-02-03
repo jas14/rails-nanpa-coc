@@ -7,7 +7,7 @@ class CreateNanpaCocCentralOfficeCodes < ActiveRecord::Migration[6.1]
       t.string :state, limit: 2
       t.string :rate_center
       t.integer :ocn
-      t.string :company, null: false
+      t.string :company
 
       t.integer :initial_growth, limit: 1
       t.boolean :pooled
